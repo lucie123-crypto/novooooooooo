@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilo básico para o corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centraliza a estrutura principal da página */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* altura total da tela */
+        }
+
+        /* Estilizando o formulário */
+        .card {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            padding: 12px;
+            border: 1px solid #ced4da;
+        }
+
+        .form-control:focus {
+            border-color: #099092;
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #099092;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #099092;
+        }
+
+        /* Adicionando espaçamento no rodapé */
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body class="bd1">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo" src="img/logonova.png" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inicio.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sobre Nós
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="Clinica.html"clinica.html>Nossa Clínica</a></li>
+                            <li><a class="dropdown-item" href="Objetivo.html">Nosso Objetivo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Especialidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+
+                            <li><a class="dropdown-item" href="Fisioterapia.html">Fisioterapia</a></li>
+                            <li><a class="dropdown-item" href="Oftamologia.html">Oftalmologia</a></li>
+                            <li><a class="dropdown-item" href="Odontologia.html">Odontologia</a></li>
+                            <li><a class="dropdown-item" href="Ortopedia.html">Ortopedia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Serviços
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="CirurgiaGeral.html">Cirurgia Geral</a></li>
+                            <li><a class="dropdown-item" href="Consultas.html">Consultas</a></li>
+                            <li><a class="dropdown-item" href="Internação.html">Internação</a></li>
+                            <li><a class="dropdown-item" href="Quimioterapia.html">Quimioterapia</a></li>
+                            <li><a class="dropdown-item" href="Vacinacao.html">Vacinação</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Exames
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="Endoscopia.html">Endoscopia</a></li>
+                            <li><a class="dropdown-item" href="ColetaDeFezes.html">Exame de Fezes</a></li>
+                            <li><a class="dropdown-item" href="Sorologia.html">Sorologias</a></li>
+                            <li><a class="dropdown-item" href="TestesRapidos.html">Testes Rápidos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TrabalheConosco.html">Trabalhe Conosco</a>
+                    </li>
+                </ul>
+                <!-- Botão adicionado fora da lista -->
+                <div class="top-bar">
+                    <a class="top-bar-button" href="Login.html">Acesse a Área Administrativa</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container">
+        <div class="card">
+            <h2>Cadastro de administrador</h2>
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Usuário</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-container">
+        <footer class="footer">
+            <!-- Informações principais -->
+            <div class="footer-section footer-left">
+                <h3>Clínica Veterinária Mundo Pet</h3>
+                <p>© 2025 - Todos os direitos reservados</p>
+                <p>CNPJ: 12.345.678/0001-90</p>
+            </div>
+
+            <!-- Redes sociais -->
+            <div class="footer-section footer-social">
+                <h4>Siga-nos:</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                            alt="Facebook">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/034/800/663/non_2x/x-new-twitter-logo-free-png.png"
+                            alt="Twitter">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contato -->
+            <div class="footer-section footer-contact">
+                <h4>Contato:</h4>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Email: contato@mundopet.com</p>
+                <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                    <span>Fale conosco</span>
+                </a>
+            </div>
+
+            <!-- Localização -->
+            <div class="footer-section footer-map">
+                <h4>Localização:</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37541.72642771243!2d-48.01667071065413!3d-16.078433909933242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935986a04bc69287%3A0x2df62ecea2daede5!2sShopping%20Sul!5e0!3m2!1sen!2sbr!4v1737571238176!5m2!1sen!2sbr"
+                    loading="lazy" allowfullscreen=""></iframe>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <style>
+        /* Estilos para a página */
+        .container {
+            max-width: 900px;
+            /* Limitar a largura da página para uma leitura mais confortável */
+        }
+
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #087375;
+        }
+
+        .card {
+            border-radius: 10px;
+            /* Arredondar bordas do card */
+            background-color: #fff;
+        }
+
+        .list-group {
+            border-radius: 8px;
+        }
+
+        .list-group-item {
+            font-size: 1rem;
+            padding: 12px 15px;
+            border: none;
+            /* Remover borda padrão */
+            background-color: #f8f9fa;
+            /* Cor de fundo clara */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            /* Espaçamento entre os itens */
+        }
+
+        .list-group-item:hover {
+            background-color: #e9ecef;
+            /* Cor mais escura no hover */
+        }
+
+        .botão {
+            padding: 12px 25px;
+            font-weight: 600;
+            border-radius: 50px;
+            /* Tornar o botão mais arredondado */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .botão {
+            background-color: #087375;
+            /* Tom mais escuro no hover */
+            text-decoration: none;
+        }
+
+        /* Melhorar a legibilidade do link */
+        .text-center a {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .text-top {
+            margin-left: 2000px;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+            .navbar {
+                position: absolute;
+                /* Remove a navbar do fluxo normal */
+                top: 150px;
+                /* Ajuste a distância de acordo com a posição desejada */
+                width: 75%;
+                height: 200px;
+                /* Move a navbar para a esquerda */
+            }
+        }
+
+
+
+        /* Botão na barra superior */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            /* Alinha o botão à direita */
+        }
+
+
+
+        .top-bar-button {
+            background-color: #087375;
+            /* Cor de fundo azul */
+            color: #fff;
+            /* Cor do texto branco */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+
+
+        /* Efeito hover no botão */
+        .top-bar-button:hover {
+            background-color: #099092;
+            transform: scale(1.05);
+            /* Leve zoom */
+        }
+
+        /* Efeito ao clicar no botão */
+        .top-bar-button:active {
+            transform: scale(0.95);
+            /* Reduz ligeiramente ao clicar */
+        }
+
+        /* Itens da navbar */
+        .nav-item .nav-link {
+            color: #000;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-item .nav-link:hover {
+            color: #099092;
+            /* Azul no hover */
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+
+
+
+
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                position: absolute;
+                /* Remove a navbar do fluxo normal */
+                top: 150px;
+                /* Ajuste a distância de acordo com a posição desejada */
+                width: 75%;
+                height: 200px;
+                /* Move a navbar para a esquerda */
+            }
+        }
+
+        button {
+            background-color: rgb(8, 115, 117);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(4, 147, 150);
+        }
+
+
+        .footer-container {
+            background-color: #087375;
+            padding: 50px 20px;
+            /* Ajuste de espaçamento superior/inferior */
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        /* Footer principal */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Centraliza horizontalmente */
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Centraliza o footer na página */
+            gap: 30px;
+            /* Espaçamento entre seções */
+        }
+
+        /* Estilo das seções */
+        .footer-section {
+            flex: 1 1 300px;
+            /* Melhor aproveitamento do espaço no desktop */
+            text-align: center;
+            padding: 20px 10px;
+            /* Aumenta a margem interna para mais equilíbrio */
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 2px solid #055e5d;
+            padding-bottom: 8px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Redes sociais */
+        .footer-social .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            /* Aumenta a distância entre os ícones */
+        }
+
+        .social-icon img {
+            width: 35px;
+            height: 35px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover img {
+            transform: scale(1.2);
+            /* Efeito mais visível ao passar o mouse */
+        }
+
+        /* Botão do WhatsApp */
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            /* Botão mais confortável */
+            border-radius: 8px;
+            /* Cantos levemente mais arredondados */
+            font-size: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .whatsapp-button img {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+
+        /* Estilo do mapa */
+        .footer-map iframe {
+            width: 100%;
+            height: 250px;
+            /* Mapa mais proporcional */
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            /* Adiciona leve destaque */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                flex: 1 1 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .footer-map iframe {
+                width: 90%;
+                /* Margem interna no modo mobile */
+                height: 200px;
+            }
+        }
+    </style>
+</body>
+
+</html>
